@@ -49,7 +49,16 @@ public interface Action extends Runnable, AutoCloseable {
             Logger.getLogger(Action.class.getName()).log(Level.SEVERE, null, ex);
         }
                 break;
+    
+            case "size":
+                FileReadSizeAction fileReadSizeAction = new FileReadSizeAction();
+                fileReadSizeAction.run();
+                break;
 
+            case "info":
+                FileInfoAction fileInfoAction = new FileInfoAction();
+                fileInfoAction.run();
+                break;
         }
     }
 

@@ -16,8 +16,8 @@ public class FileCopyAction implements Action {
     /**
      * {@inheritDoc}
      */
-    String filename = "D:\\Users\\Bozhenkov\\lab2\\Exam808_SampleQuestion.pdf";
-    String dest = "D:\\Users\\Bozhenkov\\Exam808_SampleQuestion.pdf";
+    String filename = "C:\\Users\\Ilya\\lab2\\Exam808_SampleQuestion.pdf";
+    String dest = "C:\\Users\\Ilya\\Exam808_SampleQuestion.pdf";
     File source = new File(filename);
     Path p1 = source.toPath();
 
