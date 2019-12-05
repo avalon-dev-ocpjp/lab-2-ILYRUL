@@ -13,16 +13,20 @@ import java.util.logging.Logger;
  * пространства.
  */
 public class FileMoveAction implements Action {
+    
+     
+
     /**
      * {@inheritDoc}
      */
-    String filename = "D:\\Users\\Bozhenkov\\lab2\\Exam808_SampleQuestion.pdf";
-    String dest = "D:\\Users\\Bozhenkov\\Exam808_SampleQuestion.pdf";
+    String filename = "C:\\Users\\Ilya\\lab2\\Exam808_SampleQuestion.pdf";
+    String dest = "C:\\Users\\Ilya\\Exam808_SampleQuestion.pdf";
     File source = new File(filename);
     Path p1 = source.toPath();
 
     File destination = new File(dest);
     Path p2 = destination.toPath();
+    private Object sourceFile;
 
     private void movefile() throws IOException {
         Files.copy(p1, p2, StandardCopyOption.REPLACE_EXISTING);
@@ -66,7 +70,11 @@ public class FileMoveAction implements Action {
         /*
          * TODO №5 Реализуйте метод close класса FileMoveAction
          */
-       
+       sourceFile = null;
+ destination = null;
+ close();
+        System.out.println("move closed");
     }
+    
 
 }
